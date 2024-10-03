@@ -79,15 +79,11 @@
 		</plugins>
 	</build>
 	<distributionManagement>
-		<repository>
-			<id>maven-Banking-releases</id> <!-- ID for releases repository -->
-			<url>http://localhost:8082/repository/maven-Banking-releases/</url> <!-- URL for release repository -->
-		</repository>
-
 		<snapshotRepository>
-			<id>maven-Banking-snapshots</id> <!-- ID for snapshots repository -->
-			<url>http://localhost:8082/repository/maven-Banking-snapshots/</url> <!-- URL for snapshot repository -->
+			<id>maven-Banking-snapshots</id> <!-- Must match settings.xml -->
+			<url>http://localhost:8082/repository/maven-Banking-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
 
 </project>
