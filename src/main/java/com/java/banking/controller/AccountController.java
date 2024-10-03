@@ -1,5 +1,6 @@
 package com.java.banking.controller;
 
+
 import com.java.banking.entity.Account;
 import com.java.banking.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,9 +47,9 @@ public class AccountController {
         return "Account with ID " + id + " has been deleted successfully.";
     }
 
-    @PutMapping("/update")
-    public String updateAccount(@RequestBody Account account) {
-
-        return accountService.updateAccount(account);
-    }
+//    @PutMapping("/update")
+//    public String updateAccount(@RequestBody Account account) {
+//
+//        return accountService.updateAccount(account);
+//    }
 }

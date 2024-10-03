@@ -1,5 +1,6 @@
 package com.java.banking.service;
 
+import java.util.Optional;
 import com.java.banking.entity.Account;
 import com.java.banking.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,17 +37,17 @@ public class AccountService {
     }
 
 
-    public String updateAccount(Account account) {
-        Optional<Account> existingAccount = accountRepository.findById(account.getId());
-        if (existingAccount.isPresent()) {
-            Account accountToUpdate = existingAccount.get();
-            accountToUpdate.setAccountHolderName(account.getAccountHolderName());
-            accountToUpdate.setBalance(account.getBalance());
-            accountRepository.save(accountToUpdate);
-            return "Account updated successfully!";
-        }
-        return "Account not found!";
-    }
+//    public String updateAccount(Account account) {
+//        Optional<Account> existingAccount = accountRepository.findById(account.getId());
+//        if (existingAccount.isPresent()) {
+//            Account accountToUpdate = existingAccount.get();
+//            accountToUpdate.setAccountHolderName(account.getAccountHolderName());
+//            accountToUpdate.setBalance(account.getBalance());
+//            accountRepository.save(accountToUpdate);
+//            return "Account updated successfully!";
+//        }
+//        return "Account not found!";
+//    }
 //        return accountRepository.save(accountToUpdate);
 
     }
